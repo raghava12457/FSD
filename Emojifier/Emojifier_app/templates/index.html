@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-vector/gradient-world-emoji-day-background-with-emoticons_23-2149425513.jpg?w=996&t=st=1684735990~exp=1684736590~hmac=25043c5129fd2e1b54d956b407779d800397cb10b9e16494e7fd6326d09ea8eb");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+
+    <center>
+        <h1>Emojifier</h1>
+        <form action="" method="POST">
+           
+            <textarea name="content" cols="30" rows="10"></textarea>
+            <button type="submit" id="pd">Predict</button>
+        </form>
+        <p id="p">
+            
+        </p>
+        <button class="button">About The Game</button>
+        <div class="text">
+
+        </div>
+        <div>
+            <p id="crt">
+                Hello sir!!!<br>
+                I'm Raghavendra <br>
+                Roll No : AM.EN.U4AIE20156 <br>
+                <strong>I have already shown my project deployment in local system to Dr.Swaminathan Sir.</strong>
+                Since Tensorflow is almost 1.4 gb i can not deploy it in pythonanywhere.
+                so here without tensrflow im deploying it here. therefore my keras model cannot predict now, but you can see the webpage.
+            </p>
+        </div>
+        <style>
+            #crt {
+                background-color: antiquewhite;
+                position: absolute;
+                text-align: justify;
+                border: 2px solid rgb(0, 0, 0);
+                border-radius: 5px;
+                right: 1000px;
+                top: 350px;
+                height: fit-content;
+                width: 300px;
+            }
+
+            #p {
+                position: absolute;
+                right: 650px;
+                top: 550px;
+            }
+
+            #pd {
+                position: absolute;
+                right: 50px;
+                top: 200px;
+            }
+
+            h1 {
+                text-shadow: 0px 4px 10px rgba(179, 147, 211, 0.8);
+                position: absolute;
+                top: 90px;
+                right: 690px;
+            }
+
+            form {
+                position: absolute;
+                right: 680px;
+                width: 200px;
+                height: 120px;
+                top: 300px;
+            }
+
+            p {
+                position: absolute;
+                right: 700px;
+                width: 200px;
+                height: 120px;
+                top: 520px;
+            }
+
+            .button {
+                position: absolute;
+                top: 160px;
+                right: 700px;
+            }
+
+            .text {
+                position: absolute;
+                top: 200px;
+                margin-top: 10px;
+                padding: 10px;
+                background-color: lightblue;
+                color: rgb(2, 2, 2);
+                font-size: 16px;
+                display: none;
+                right: 400px;
+            }
+
+            .button {
+                background-color: blue;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                border: 1px solid lightblue;
+                box-shadow: 0 0 5px 0 lightblue;
+            }
+
+            .button:hover {
+                border-color: blue;
+                box-shadow: 0 0 10px 0 blue;
+            }
+
+            .button:active {
+                border-color: darkblue;
+                box-shadow: 0 0 15px 0 darkblue;
+                color: transparent;
+                text-shadow: 0 0 5px white;
+            }
+
+            .button:active+span {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px;
+                background-color: lightblue;
+                color: white;
+                font-size: 16px;
+                transition: 0.2s;
+            }
+
+            .button:active+span:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: darkblue;
+                opacity: 0;
+                border-radius: 5px;
+                transition: 0.2s;
+            }
+
+            .button:active+span:hover {
+                opacity: 1;
+            }
+        </style>
+        <script>
+            document.querySelector(".button").addEventListener("click", function() {
+                this.classList.add("active");
+                var div = document.querySelector(".text");
+                div.textContent = "Try words like : Happy, Depression, Food, Ball, Fork etc.. in the box given below to get the relative emojis";
+                div.style.display = "block";
+                setTimeout(function() {
+                    div.style.display = "none";
+                }, 10000);
+            });
+        </script>
+
+
+
+    </center>
+
+</body>
+
+</html>
